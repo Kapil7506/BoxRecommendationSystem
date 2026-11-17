@@ -32,43 +32,50 @@ Superuser created successfully.
 ----Github repo creation-----
 (boxvenv) PS D:\BoxRecommendationService> git init                         
 Initialized empty Git repository in D:/BoxRecommendationService/.git/
-(boxvenv) PS D:\BoxRecommendationService> git add .
-(boxvenv) PS D:\BoxRecommendationService> git commit -m "Initial commit: Django warehouse box recommendation service"
-[main (root-commit) 3756f44] Initial commit: Django warehouse box recommendation service
- 33 files changed, 641 insertions(+)
+(boxvenv) PS D:\BoxRecommendationService>  git add .
+(boxvenv) PS D:\BoxRecommendationSystem> git commit -m "Initial commit: Django shipping  box recommendation system"
+[main (root-commit) d0e98fd] Initial commit: Django shipping  box recommendation system
+ 22 files changed, 893 insertions(+)
  create mode 100644 AI_USAGE.md
- create mode 100644 README.md
- create mode 100644 TEST_OUTPUT.md
+ create mode 100644 Boxrecommendationcheck.md
+ create mode 100644 Test_output.md
  create mode 100644 requirement.txt
- create mode 100644 warehouse_project/db.sqlite3
+ create mode 100644 warehouse_project/.gitignore
  create mode 100644 warehouse_project/manage.py
  create mode 100644 warehouse_project/packing/__init__.py
- create mode 100644 warehouse_project/packing/__pycache__/__init__.cpython-314.pyc
- create mode 100644 warehouse_project/packing/__pycache__/admin.cpython-314.pyc
- create mode 100644 warehouse_project/packing/__pycache__/apps.cpython-314.pyc
- create mode 100644 warehouse_project/packing/__pycache__/models.cpython-314.pyc
- create mode 100644 warehouse_project/packing/__pycache__/services.cpython-314.pyc
- create mode 100644 warehouse_project/packing/__pycache__/tests.cpython-314.pyc
- create mode 100644 warehouse_project/packing/__pycache__/views.cpython-314.pyc
  create mode 100644 warehouse_project/packing/admin.py
  create mode 100644 warehouse_project/packing/apps.py
  create mode 100644 warehouse_project/packing/migrations/0001_initial.py
  create mode 100644 warehouse_project/packing/migrations/__init__.py
- create mode 100644 warehouse_project/packing/migrations/__pycache__/0001_initial.cpython-314.pyc
- create mode 100644 warehouse_project/packing/migrations/__pycache__/__init__.cpython-314.pyc
  create mode 100644 warehouse_project/packing/models.py
+ create mode 100644 warehouse_project/packing/serializers.py
  create mode 100644 warehouse_project/packing/services.py
  create mode 100644 warehouse_project/packing/tests.py
  create mode 100644 warehouse_project/packing/views.py
+ create mode 100644 warehouse_project/warehouse_project/README.md
  create mode 100644 warehouse_project/warehouse_project/__init__.py
- create mode 100644 warehouse_project/warehouse_project/__pycache__/__init__.cpython-314.pyc
- create mode 100644 warehouse_project/warehouse_project/__pycache__/settings.cpython-314.pyc
- create mode 100644 warehouse_project/warehouse_project/__pycache__/urls.cpython-314.pyc
- create mode 100644 warehouse_project/warehouse_project/__pycache__/wsgi.cpython-314.pyc
  create mode 100644 warehouse_project/warehouse_project/asgi.py
  create mode 100644 warehouse_project/warehouse_project/settings.py
  create mode 100644 warehouse_project/warehouse_project/urls.py
  create mode 100644 warehouse_project/warehouse_project/wsgi.py
+(boxvenv) PS D:\BoxRecommendationSystem> git push -u origin main
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+(boxvenv) PS D:\BoxRecommendationSystem> git branch -M main                                                      
+(boxvenv) PS D:\BoxRecommendationSystem> git remote add origin https://github.com/Kapil7506/BoxRecommendationSystem.git
+(boxvenv) PS D:\BoxRecommendationSystem> git push -u origin main                                                 
+Enumerating objects: 26, done.
+Counting objects: 100% (26/26), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (24/24), done.
+Writing objects: 100% (26/26), 12.13 KiB | 1.52 MiB/s, done.
+Total 26 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Kapil7506/BoxRecommendationSystem.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
  
 -------CRUD OPERATIONS---------
 [16/Nov/2026 23:55:41] "GET /products/ HTTP/1.1" 200 10562
