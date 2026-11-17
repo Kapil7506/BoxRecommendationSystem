@@ -1,0 +1,40 @@
+"""
+URL configuration for warehouse_project project.
+
+The `urlpatterns` list routes URLs to views. For more information please see:
+    https://docs.djangoproject.com/en/6.1/topics/http/urls/
+Examples:
+Function views
+    1. Add an import:  from my_app import views
+    2. Add a URL to urlpatterns:  path('', views.home, name='home')
+Class-based views
+    1. Add an import:  from other_app.views import Home
+    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
+Including another URLconf
+    1. Import the include() function: from django.urls import include, path
+    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
+"""
+from django.contrib import admin
+from django.urls import path
+from packing.views import (
+    ProductListCreateView,
+    ProductDetailView,
+    BoxListCreateView,
+    BoxDetailView,
+    OrderListCreateView,
+    OrderBoxRecommendationView
+)
+
+urlpatterns = [
+    # Products CRUD
+    path('products/', ProductListCreateView.as_view(), name='product-list-create'),
+    path('products/<int:pk>/', ProductDetailView.as_view(), name='product-detail'),
+
+    # Boxes CRUD
+    path('boxes/', BoxListCreateView.as_view(), name='box-list-create'),
+    path('boxes/<int:pk>/', BoxDetailView.as_view(), name='box-detail'),
+
+    # Orders CRUD + Instant Recommendation
+    path('orders/', OrderListCreateView.as_view(), name='order-list-create'),
+    path('orders/<int:order_id>/', OrderBoxRecommendationView.as_view(), name='order-box-recommendation'),
+]
